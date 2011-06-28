@@ -1,0 +1,11 @@
+{ "name" : "WhatsUp-tweet"
+, "description" : "Twitter live stream built on Node.js - This project is only for studying purpose."
+, "version" : "0.0.1"
+, "author" : "Marcelo Vitor F. Menezes <gnumarcelo@gmail.com>"
+, "dependencies": {
+    "now": "= 0.6.0",
+    "express": "= 2.3.11",
+    "twitter-node": "= 0.0.2",
+    "now": "= 0.6.0"
+  }
+}

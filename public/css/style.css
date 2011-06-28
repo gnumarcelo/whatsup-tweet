@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+	top: 0px;
+	height: 100%;
+	/*-moz-box-shadow: 0 50px 200px rgba(0, 0, 0, 0.2) inset; */
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight:normal;
+    background-attachment: fixed;
+    background-color: #276FDB;
+    background-image: -moz-linear-gradient(#08B5FB, #276FDB);
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    padding: 60px;
+    text-rendering: optimizelegibility;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  #header {
+	margin-bottom: 20px;
+  }
+  h3 {
+	font-size: 45px;
+	text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  }
+  p#users_info {
+	font-size: 0.6em;
+  }
+  #searchbar {
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 390px;
+	padding: 6px;
+  }
+  #searchbar input {
+	border: 0px;
+    border: none;
+	height: 2em;
+	font-size: 1.5em;
+	padding: 4px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+  }
+  input[type="text"] {
+	color:#515050;
+	width: 200px;
+  }
+  input[type="button"] {
+	-webkit-appearance: none;
+	padding:4px;
+	width: 90px;
+  }
+  input[type="button"]:hover {
+	-webkit-appearance: none;
+	padding:4px;
+	width: 90px;
+  }
+  input[type="button"].green {
+    background-color: #82E006;
+  }
+  input[type="button"].green:hover {
+	background-color: #93FF07;
+  }
+  input[type="button"].red {
+    background-color: #C41703;
+  }
+  input[type="button"].red:hover {
+	background-color: #EA1700;
+  }
+  .tweet {
+    -moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 0.25);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 0.25);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 0.25);
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(transparent)); 
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15), transparent); 
+    background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.15), transparent); 
+    background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.15), transparent); 
+    background-image:         linear-gradient(top, rgba(0, 0, 0, 0.15), transparent); /* standard, but currently unimplemented */
+    border-color: rgba(94, 94, 94, 0.3) rgba(94, 94, 94, 0.3) #FFFFFF #FFFFFF;
+    color: #fff;
+    float: left;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+    padding: 15px;
+    width: 120px;
+	word-wrap: break-word;
+	display: none;
+  }
+  .tweet img {
+    -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    float: left;
+    margin-right: 10px;
+  }
+  .tweet p span.user_name {
+    color: black;
+  }

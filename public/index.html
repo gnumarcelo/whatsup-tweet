@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/nowjs/now.js" type="text/javascript"></script>  
+    <script src="javascript/jquery.masonry.min.js" type="text/javascript"></script> 
+	<link type="text/css" rel="stylesheet" media="all" href="css/style.css" />
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+		$("body").css("display", "none");
+		$("body").fadeIn(2000);
+
+        $('#stop').click(function() {
+          now.stopStreaming();
+        });
+
+        $('#search').click(function() {
+			if($('#term').val()){
+		        now.goStreaming($('#term').val());				
+			}		
+        });
+
+        now.renderStream = function(profile_img, nome, mensagem) {
+              $('#container').prepend('<div id="tweet_' + nome + '" class="tweet"></div>');
+              $('#tweet_' + nome).append('<img id="profile_img' + nome + '"' + ' src="'+ profile_img + '" />');
+              $('#tweet_' + nome).append('<p><span class="user_name">@'+ nome + '</span>: ' +  mensagem + '</p>');
+			  $('#tweet_' + nome).fadeIn(2000);
+        };
+
+		now.clearContent = function() {
+			$('#container').html('');
+		};
+		
+		now.updateTotalConnected = function(total){
+			$('#users_count').html(total);
+		};
+
+      });
+
+      $(function(){
+        $('#container').masonry({
+          itemSelector : '.tweet',
+          columnWidth : 200,
+          isAnimated: true
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+	<div id="header">
+    	<h3>What's up on Twitter?</h3>
+    </div>
+	<div id="searchbar">
+		<input type="text" name="Search Term" id="term">
+    	<input id="search" type="button" class="green" value="Go"/>
+    	<input id="stop" type="button" class="red" value="Stop"/>
+    </div>
+	<div>
+		<p id="users_info">Online users: <span id="users_count"></span></p>
+	</div>
+	<div id="container"></div>
+  </body>
+</html>
